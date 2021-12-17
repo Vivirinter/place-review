@@ -15,9 +15,11 @@ class MvcConfig : WebMvcConfigurerAdapter() {
     override fun addResourceHandlers(registry: ResourceHandlerRegistry) {
         registry?.addResourceHandler(
             "/webjars/**",
-            "/css/**")
+            "/css/**"
+        )
             ?.addResourceLocations(
                 "classpath:/META-INF/resources/webjars/",
-                "classpath:/static/css/")
+                "classpath:/static/css/"
+            )
     }
 }
